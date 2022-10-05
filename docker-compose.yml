@@ -1,0 +1,18 @@
+version: '3.9'
+services :
+  services1 :
+   container_name: django_app
+   build : .
+   ports : 
+     - '8000:8000'
+   volumes :
+     - .:/Devendra
+  services2 :
+    image : 'postgres:latest'
+    container_name : pg_db_continer
+    ports :
+      - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: 'Devendra@100'
+      POSTGRES_USER: 'Devendratanwar'
+
